@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>페이지 제목</title>
+    <title>한국도로교통공단</title>
   <link rel="stylesheet" href="/assets/css/style.css" />
 
   <script src="/assets/js/jquery-3.7.0.min.js"></script>
@@ -13,20 +13,18 @@
 <body>
   <div class="wrap">
     <header class="topArea">
-      <h1><span class="hidden">한국도로교통공단</span></h1>
+      <h1 class="logo"><a href="#"><span class="hidden">한국도로교통공단</span></a></h1>
 
-      <nav>
-        <ul class="nav">
-          <li><span>돌발정보</span></li>
-          <li><span>신호센터</span></li>
-          <li><span>로그관리</span></li>
-          <li><span>정보관리</span></li>
-        </ul>
-      </nav>
+      <ul class="nav">
+        <li><span>돌발정보</span></li>
+        <li><span>신호센터</span></li>
+        <li><span>로그관리</span></li>
+        <li><span>정보관리</span></li>
+      </ul>
 
       <div class="userInfo">
-        <span class="name">김중앙 (A29301)</span>
-        <button type="button" class="ic ic_logout" title="로그아웃"><span class="hide">로그아웃</span></button>
+        <span class="name">홍길동</span>
+        <button type="button" class="ic ic_logout" title="로그아웃"><span class="hidden">로그아웃</span></button>
       </div>
     </header>
 
@@ -48,7 +46,7 @@
           </div>
         </div>
 
-        <button class="btnFold">접기</button>
+        <button class="btnFold"><span class="hidden">접기</span></button>
       </div>
 
       <div class="contents">
@@ -240,11 +238,10 @@
             </div>
           </div>
           <!--//gridArea end -->
-          <button class="btnFold">접기</button>
+          <button class="btnFold"><span class="hidden">접기</span></button>
         </div>
-      </div>
-      
+      </div>      
     </main>
-  </main>
+  </div>
 </body>
 </html>
