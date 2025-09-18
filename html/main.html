@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지 제목</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/jquery-ui.min.js"></script>
+  <script src="/assets/js/ui.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topArea">
+      <h1><span class="hidden">한국도로교통공단</span></h1>
+
+      <nav>
+        <ul class="nav">
+          <li><span>돌발정보</span></li>
+          <li><span>신호센터</span></li>
+          <li><span>로그관리</span></li>
+          <li><span>정보관리</span></li>
+        </ul>
+      </nav>
+
+      <div class="userInfo">
+        <span class="name">김중앙 (A29301)</span>
+        <button type="button" class="ic ic_logout" title="로그아웃"><span class="hide">로그아웃</span></button>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="LnbArea">
+        <ul class="tab">
+          <li><span>교차로</span></li>
+          <li><span>신호그룹</span></li>
+        </ul>
+
+        <div class="tabContainer">
+          <div class="searchBox">
+            <div class="inpBox"><input type="search"></div>
+            <button type="button" class="btn medium primary">검색</button>
+          </div>
+
+          <div class="treeArea">
+
+          </div>
+        </div>
+
+        <button class="btnFold">접기</button>
+      </div>
+
+      <div class="contents">
+        <div class="mapArea">
+          <div class="fncButton"></div>
+          <div class="legend"></div>
+        </div>
+
+        <div class="infoArea">
+          <!-- gridArea -->
+          <div class="gridArea">
+            <div class="tableBody">
+              <table>
+                <caption>테이블 내용 요약</caption>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="checkbox">
+                        <input type="checkbox" id="ch00">
+                        <label for="ch00"></label>
+                      </div>
+                    </th>
+                    <th>출력</th>
+                    <th>필수</th>
+                    <th>상세</th>
+                    <th>카드번호</th>
+                    <th>카드번호</th>
+                    <th>소지자</th>
+                    <th>승인일자</th>
+                    <th>승인시간</th>
+                    <th>사용금액</th>
+                    <th>부가세</th>
+                    <th>사용처</th>
+                    <th>사용처</th>
+                    <th>사용처</th>
+                    <th>사용처</th>
+                  </tr>
+                </thead>
+                <!--//tableHead end -->
+                <tbody>          
+                  <tr>
+                    <td>
+                      <span class="checkbox">
+                        <input type="checkbox" id="ch03" checked>
+                        <label for="ch03"></label>
+                      </span>
+                    </td>
+                    <td><button type="button" class="ic ic_print"><span class="hide">출력</span></button></td>
+                    <td>
+                      <span class="checkboxTy2">
+                        <input type="checkbox" id="ch" checked>
+                        <label for="ch"></label>
+                      </span>
+                    </td>
+                    <td><span>1</span></td>
+                    <td><span>1234-5678-9123-4567</span></td>
+                    <td><span>1234-5678-9123-4567</span></td>
+                    <td><span>김중앙</span></td>
+                    <td><span>2025-10-10</span></td>
+                    <td><span>23:29:00</span></td>
+                    <td class="tar"><span>20,000</span></td>
+                    <td class="tar"><span>2,000</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="checkbox">
+                        <input type="checkbox" id="ch05" checked>
+                        <label for="ch05"></label>
+                      </span>
+                    </td>
+                    <td><button type="button" class="ic ic_print"><span class="hide">출력</span></button></td>
+                    <td>
+                      <span class="checkboxTy2">
+                        <input type="checkbox" id="ch" checked>
+                        <label for="ch"></label>
+                      </span>
+                    </td>
+                    <td><span>1</span></td>
+                    <td><span>1234-5678-9123-4567</span></td>
+                    <td><span>1234-5678-9123-4567</span></td>
+                    <td><span>김중앙</span></td>
+                    <td><span>2025-10-10</span></td>
+                    <td><span>23:29:00</span></td>
+                    <td class="tar"><span>20,000</span></td>
+                    <td class="tar"><span>2,000</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="checkbox">
+                        <input type="checkbox" id="ch06">
+                        <label for="ch06"></label>
+                      </span>
+                    </td>
+                    <td><button type="button" class="ic ic_print"><span class="hide">출력</span></button></td>
+                    <td>
+                      <span class="checkboxTy2">
+                        <input type="checkbox" id="ch" checked>
+                        <label for="ch"></label>
+                      </span>
+                    </td>
+                    <td><span>1</span></td>
+                    <td><span>1234-5678-9123-4567</span></td>
+                    <td><span>1234-5678-9123-4567</span></td>
+                    <td><span>김중앙</span></td>
+                    <td><span>2025-10-10</span></td>
+                    <td><span>23:29:00</span></td>
+                    <td class="tar"><span>20,000</span></td>
+                    <td class="tar"><span>2,000</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="checkbox">
+                        <input type="checkbox" id="ch07">
+                        <label for="ch07"></label>
+                      </span>
+                    </td>
+                    <td><button type="button" class="ic ic_print"><span class="hide">출력</span></button></td>
+                    <td>
+                      <span class="checkboxTy2">
+                        <input type="checkbox" id="ch" checked>
+                        <label for="ch"></label>
+                      </span>
+                    </td>
+                    <td><span>1</span></td>
+                    <td><span>1234-5678-9123-4567</span></td>
+                    <td><span>1234-5678-9123-4567</span></td>
+                    <td><span>김중앙</span></td>
+                    <td><span>2025-10-10</span></td>
+                    <td><span>23:29:00</span></td>
+                    <td class="tar"><span>20,000</span></td>
+                    <td class="tar"><span>2,000</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="checkbox">
+                        <input type="checkbox" id="ch08">
+                        <label for="ch08"></label>
+                      </span>
+                    </td>
+                    <td><button type="button" class="ic ic_print"><span class="hide">출력</span></button></td>
+                    <td>
+                      <span class="checkboxTy2">
+                        <input type="checkbox" id="ch" checked>
+                        <label for="ch"></label>
+                      </span>
+                    </td>
+                    <td><span>1</span></td>
+                    <td><span>1234-5678-9123-4567</span></td>
+                    <td><span>1234-5678-9123-4567</span></td>
+                    <td><span>김중앙</span></td>
+                    <td><span>2025-10-10</span></td>
+                    <td><span>23:29:00</span></td>
+                    <td class="tar"><span>20,000</span></td>
+                    <td class="tar"><span>2,000</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                    <td><span>씨유중앙미디어</span></td>
+                  </tr>
+                </tbody>
+                <!-- tableTotal -->
+                <tfoot>
+                  <tr>
+                    <th colspan="8"></th>
+                    <th><span>합계</span></th>
+                    <th class="tar"><em>603,452</em>원</th>
+                    <th class="tar"><em>603,452</em>원</th>
+                    <th colspan="4"></th>
+                  </tr>
+                </tfoot>
+                <!--//tableTotal end -->
+              </table>
+            </div>
+          </div>
+          <!--//gridArea end -->
+          <button class="btnFold">접기</button>
+        </div>
+      </div>
+      
+    </main>
+  </main>
+</body>
+</html>
