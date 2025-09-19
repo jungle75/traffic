@@ -135,6 +135,17 @@ a {
   color: inherit;
 }
 
+caption, legend {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 0px;
+  height: 0px;
+  font-size: 0px;
+  line-height: 0;
+  overflow: hidden;
+}
+
 // etc
 .hidden {
   display: none;
