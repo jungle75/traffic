@@ -15,6 +15,7 @@
   padding: 0 16px;
   background-color: var(--white);
   border-bottom: 1px solid var(--gray70);
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
   
   .logo {
     width: 320px;
@@ -113,6 +114,7 @@
     border-right: 1px solid var(--gray60);
     background-color: var(--white);
     transition: all 0.3s;
+    box-shadow: -2px 3px 21px 0 rgba(0, 0, 0, 0.2);
 
     &.fold {
       margin-left: -320px;
