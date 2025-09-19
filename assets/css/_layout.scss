@@ -108,6 +108,7 @@
     width: 320px;
     display: flex;
     flex-direction: column;
+    gap: 12px;
     padding: 16px;
     border-right: 1px solid var(--gray60);
     background-color: var(--white);
@@ -120,15 +121,41 @@
     .tab {
       display: flex;
       height: 48px;
+      padding: 4px;
+      border-radius: 4px;
+      background-color: var(--gray70);
       li {
         flex: 1;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        border-radius: 6px;
+        border: 1px solid var(--gray70);
+        background-color: var(--gray70);
+        cursor: pointer;
+        &:hover {
+          border-color: var(--green30);
+          background-color: white;
+        }
+        &.active {
+          border-color: var(--green30);
+          background-color: white;
+          span {
+            color: var(--green30);
+          }
+        }
+        span {
+          font-size: 16px;
+          font-weight: 600;
+          color: var(--gray5);
+        }
       }
     }
     .tabContainer {
       flex: 1;
       display: grid;
-      grid-template-rows: 40px 1fr;
+      grid-template-rows: 30px 1fr;
       gap: 16px;
       .searchBox {
         display: flex;
