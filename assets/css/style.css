@@ -1590,11 +1590,58 @@ html .ui-button.ui-state-disabled:active {
   z-index: 1;
   right: 16px;
   top: 0;
-  transform: translateY(-30px);
+  transform: translateY(-90px);
   display: flex;
+  gap: 4px;
   padding: 4px;
   border-radius: 4px;
   background-color: white;
+}
+.container .contents .infoArea .legend .label {
+  position: relative;
+  padding: 24px 8px 4px 8px;
+  display: flex;
+  gap: 8px;
+}
+.container .contents .infoArea .legend .label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+  color: #6A6A6A;
+}
+.container .contents .infoArea .legend .label span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  text-align: center;
+  color: #6A6A6A;
+}
+.container .contents .infoArea .legend .label span::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #55FEE2;
+}
+.container .contents .infoArea .legend .online {
+  border-radius: 4px;
+  background-color: #F0F2F6;
+}
+.container .contents .infoArea .legend .online::before {
+  content: "ON LINE";
+}
+.container .contents .infoArea .legend .offline {
+  border-radius: 4px;
+  background-color: #F0F2F6;
+}
+.container .contents .infoArea .legend .offline::before {
+  content: "OFF LINE";
 }
 .container .contents .infoArea .gridArea {
   width: 100%;
