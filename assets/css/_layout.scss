@@ -185,8 +185,16 @@
         }
       }
     }
-  }
+    .treeArea {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
 
+      li:nth-child(even) {
+        .row {background-color: #F0F2F6;}
+      }
+    }
+  }
   .btnFold {
     position: absolute;
     z-index: 10;

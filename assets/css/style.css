@@ -1531,6 +1531,14 @@ html .ui-button.ui-state-disabled:active {
 .container .LnbArea .btnFold.fold::before {
   transform: rotate(270deg);
 }
+.container .LnbArea .treeArea {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.container .LnbArea .treeArea li:nth-child(even) .row {
+  background-color: #F0F2F6;
+}
 .container .btnFold {
   position: absolute;
   z-index: 10;
