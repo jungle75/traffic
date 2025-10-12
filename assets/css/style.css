@@ -6,27 +6,12 @@
   /* color */
   --black: #000000;
   --white: #ffffff;
-  --cyan95: #ECFDFC;
-  --cyan90: #DEF8F7;
-  --cyan80: #ACEEEB;
-  --cyan40: #00C3CC;
-  --cyan30: #00B3B9;
-  --cyan20: #009DA0;
+  --cyan30: #00C3CC;
   --blue30: #1C89E9;
-  --blue60: #63B6F9;
-  --blue80: #BBDEFC;
-  --blue90: #E3F2FE;
-  --blue95: #E9F1FE;
   --green30: #00BD52;
-  --yellow20: #FFA000;
   --yellow30: #FFB300;
-  --yellow60: #FFD54F;
-  --yellow70: #FFE082;
-  --red40: #F6331C;
-  --red50: #F2473D;
-  --red60: #EA6B65;
-  --red80: #FFCACD;
-  --red90: #FFEAEC;
+  --red30: #F2473D;
+  --pink30: #F81AE9;
   --gray99: #F7F7F8;
   --gray90: #F7FBFB;
   --gray80: #F2F6F6;
@@ -342,7 +327,7 @@ h5 {
   border-radius: var(--brS);
   border: 1px solid var(--line);
   background-color: #FFFFFF;
-  height: 30px;
+  height: 34px;
 }
 
 .inpBox input {
@@ -354,7 +339,7 @@ h5 {
   outline: none;
   background-color: transparent;
   width: 100%;
-  height: 22px;
+  height: 100%;
 }
 
 .inpBox:focus-within {
@@ -363,6 +348,11 @@ h5 {
 
 .inpBox input:invalid {
   border-color: var(--red50);
+}
+
+.inpBox input::placeholder {
+  color: #999;
+  font-weight: 400;
 }
 
 /*disabled 처리*/
@@ -781,7 +771,7 @@ h5 {
 
 .btn.red {
   background-color: var(--red80);
-  color: var(--red40);
+  color: var(--red30);
 }
 
 .btn.red:hover {
@@ -839,7 +829,7 @@ h5 {
 }
 
 .ic_search::before {
-  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.5829 7.70423C13.9105 9.03182 13.9105 11.1843 12.5829 12.5119C11.2553 13.8394 9.10285 13.8394 7.77526 12.5119C6.44767 11.1843 6.44767 9.03182 7.77526 7.70423C9.10285 6.37664 11.2553 6.37664 12.5829 7.70423ZM14.1039 13.0419C15.5421 11.1228 15.3887 8.38872 13.6435 6.64357C11.7302 4.73019 8.62797 4.73019 6.7146 6.64357C4.80122 8.55694 4.80122 11.6591 6.7146 13.5725C8.43551 15.2934 11.1181 15.4665 13.0325 14.0918L16.4383 17.4977C16.7312 17.7906 17.2061 17.7906 17.499 17.4977C17.7919 17.2048 17.7919 16.7299 17.499 16.437L14.1039 13.0419Z' fill='%2396A6AE'/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.143 10.3572C8.74662 10.3572 10.8573 8.2465 10.8573 5.64287C10.8573 3.03925 8.74662 0.928589 6.143 0.928589C3.53937 0.928589 1.42871 3.03925 1.42871 5.64287C1.42871 8.2465 3.53937 10.3572 6.143 10.3572Z' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.5718 12.0714L9.57178 9.07141' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 
 .ic_trash::before {
@@ -899,7 +889,7 @@ h5 {
 }
 
 .ic_logout::before {
-  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='30' height='30' rx='10' fill='%23F2F4F5'/%3E%3Cg clip-path='url(%23clip0_2300_1368)'%3E%3Cpath d='M10.4119 8.44558L11.3295 9.75646C9.679 10.914 8.6 12.831 8.6 15C8.6 18.5346 11.4654 21.4 15 21.4C18.5346 21.4 21.4 18.5346 21.4 15C21.4 12.831 20.321 10.914 18.6705 9.75646L19.5881 8.44558C21.6513 9.89247 23 12.2887 23 15C23 19.4182 19.4182 23 15 23C10.5817 23 7 19.4182 7 15C7 12.2887 8.34875 9.89247 10.4119 8.44558ZM14.2 15V7H15.8V15H14.2Z' fill='%23ADB9C0'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2300_1368'%3E%3Crect width='16' height='16' fill='white' transform='translate(7 7)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 6.5V11.1538' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.3846 7.66473C16.2873 8.36951 16.9475 9.3385 17.2731 10.4365C17.5987 11.5345 17.5733 12.7068 17.2007 13.7897C16.828 14.8726 16.1266 15.8122 15.1943 16.4773C14.2619 17.1425 13.1453 17.5 12 17.5C10.8547 17.5 9.73805 17.1425 8.80574 16.4773C7.87343 15.8122 7.172 14.8726 6.79933 13.7897C6.42666 12.7068 6.40134 11.5345 6.7269 10.4365C7.05246 9.3385 7.71266 8.36951 8.61538 7.66473' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 
 .ic_caution::before {
@@ -963,7 +953,7 @@ h5 {
 }
 
 .ic_cross::before {
-  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='5.5' y='10' width='13' height='4' rx='0.5' fill='%2300A73C'/%3E%3Crect x='10' y='5.5' width='4' height='13' rx='0.5' fill='%2300A73C'/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='5.5' y='10' width='13' height='4' rx='0.5' fill='white'/%3E%3Crect x='10' y='5.5' width='4' height='13' rx='0.5' fill='white'/%3E%3C/svg%3E%0A");
 }
 
 .ic_signGroup::before {
@@ -1069,7 +1059,8 @@ h5 {
 }
 
 /*table box*/
-.gridArea, .dataTable {
+.gridArea,
+.dataTable {
   overflow: hidden;
   border: 1px solid var(--gray70);
 }
@@ -1215,7 +1206,8 @@ h5 {
   left: 1px;
 }
 
-.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
   width: 24px;
   height: 24px;
   margin: 0;
@@ -1245,7 +1237,8 @@ h5 {
   background: transparent;
 }
 
-.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
   width: auto;
   border: 0;
 }
@@ -1258,7 +1251,8 @@ h5 {
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default,
-.ui-button, html .ui-button.ui-state-disabled:hover,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
   border: 0;
   border-radius: 4px;
@@ -1268,9 +1262,12 @@ html .ui-button.ui-state-disabled:active {
   text-align: center;
 }
 
-.ui-state-active, .ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active, a.ui-button:active,
-.ui-button:active, .ui-button.ui-state-active:hover {
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
   color: var(--white);
   background-color: var(--blue50);
 }
@@ -1287,7 +1284,8 @@ html .ui-button.ui-state-disabled:active {
   color: #76859C;
 }
 
-.ui-datepicker td span, .ui-datepicker td a {
+.ui-datepicker td span,
+.ui-datepicker td a {
   padding: 0;
   width: 20px;
   line-height: 20px;
@@ -1352,6 +1350,66 @@ html .ui-button.ui-state-disabled:active {
   gap: 8px;
 }
 
+/* sign */
+.status {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.status.green {
+  background-color: var(--green30);
+}
+.status.blue {
+  background-color: var(--blue30);
+}
+.status.red {
+  background-color: var(--red30);
+}
+
+.sign {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.sign.Signal {
+  background-color: var(--red30);
+}
+.sign.Blink {
+  background-color: var(--yellow30);
+}
+.sign.Out {
+  background-color: var(--gray30);
+}
+.sign.Passive {
+  background-color: var(--cyan30);
+}
+.sign.Normal_on {
+  border: 2px solid var(--blue30);
+  background-color: rgba(26, 112, 248, 0.2);
+}
+.sign.Time_on {
+  border: 2px solid var(--pink30);
+  background-color: rgba(248, 26, 233, 0.2);
+}
+.sign.Sensitive_on {
+  border: 2px solid var(--red30);
+  background-color: rgba(248, 26, 30, 0.2);
+}
+.sign.Normal_off {
+  border: 2px solid var(--blue30);
+  background-color: var(--gray50);
+}
+.sign.Time_off {
+  border: 2px solid var(--pink30);
+  background-color: var(--gray50);
+}
+.sign.Sensitive_off {
+  border: 2px solid var(--red30);
+  background-color: var(--gray50);
+}
+
 .wrap {
   width: 100%;
   height: 100%;
@@ -1412,7 +1470,8 @@ html .ui-button.ui-state-disabled:active {
 .topArea .nav li:hover {
   color: var(--green30);
 }
-.topArea .nav .act, .topArea .nav a:hover {
+.topArea .nav .act,
+.topArea .nav a:hover {
   font-weight: 700;
   color: var(--gray5);
 }
@@ -1455,7 +1514,7 @@ html .ui-button.ui-state-disabled:active {
 }
 .container .LnbArea {
   position: relative;
-  width: 320px;
+  width: 350px;
   display: flex;
   border-right: 1px solid var(--gray60);
   background-color: var(--white);
@@ -1492,18 +1551,45 @@ html .ui-button.ui-state-disabled:active {
   font-weight: 600;
   color: white;
 }
+.container .LnbArea .tab .ic_logout {
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .LnbArea .tab .ic_logout span {
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+}
 .container .LnbArea .tabContainer {
   flex: 1;
   display: grid;
   grid-template-rows: 60px 1fr;
 }
 .container .LnbArea .tabContainer .searchBox {
+  position: relative;
   display: flex;
   gap: 4px;
-  padding: 16px;
+  padding: 12px;
 }
 .container .LnbArea .tabContainer .searchBox .inpBox {
   flex: 1;
+}
+.container .LnbArea .tabContainer .searchBox .ic_search {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 36px;
+  height: 36px;
+}
+.container .LnbArea .tabContainer .searchBox .ic_search::before {
+  width: 16px;
+  height: 16px;
 }
 .container .LnbArea .btnFold {
   top: 50%;
@@ -1520,24 +1606,52 @@ html .ui-button.ui-state-disabled:active {
   transform: rotate(270deg);
 }
 .container .LnbArea .treeArea {
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 2px;
+  overflow: auto;
 }
 .container .LnbArea .treeArea .item .row {
   display: flex;
+  align-items: center;
   gap: 8px;
   padding: 8px;
+  font-size: 14px;
   cursor: pointer;
 }
-.container .LnbArea .treeArea .item .row .status {
+.container .LnbArea .treeArea .item .row span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container .LnbArea .treeArea .item .row .all .count {
+  color: var(--blue30);
+}
+.container .LnbArea .treeArea .item .row .strange::before {
+  content: "";
   display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width: 1px;
+  height: 14px;
+  background-color: #ddd;
+}
+.container .LnbArea .treeArea .item .row .strange .count {
+  color: var(--red30);
+}
+.container .LnbArea .treeArea .item .row::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.9939 6L12.3982 6L8.19604 11.6611L3.9939 6Z' fill='%23A0A4B0' stroke='%23A0A4B0'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  transition: all 0.2s;
 }
 .container .LnbArea .treeArea .item.open .row {
   background-color: #EAF3FF !important;
+}
+.container .LnbArea .treeArea .item.open .row::before {
+  transform: rotate(180deg);
 }
 .container .LnbArea .treeArea .item.open .villageList {
   display: block;
@@ -1580,8 +1694,8 @@ html .ui-button.ui-state-disabled:active {
 .container .contents .mapArea .fncButton {
   position: absolute;
   z-index: 1;
-  top: 16px;
-  left: 16px;
+  top: 10px;
+  left: 10px;
   display: flex;
   gap: 4px;
 }
@@ -1613,10 +1727,11 @@ html .ui-button.ui-state-disabled:active {
   padding: 4px;
   border-radius: 4px;
   background-color: white;
+  border: 1px solid var(--green30);
 }
 .container .contents .infoArea .legend .label {
   position: relative;
-  padding: 24px 8px 4px 8px;
+  padding: 20px 8px 4px 8px;
   display: flex;
   gap: 8px;
 }
@@ -1638,24 +1753,16 @@ html .ui-button.ui-state-disabled:active {
   text-align: center;
   color: #6A6A6A;
 }
-.container .contents .infoArea .legend .label span::before {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #55FEE2;
-}
 .container .contents .infoArea .legend .online {
   border-radius: 4px;
-  background-color: #F0F2F6;
+  background-color: rgba(0, 167, 60, 0.1);
 }
 .container .contents .infoArea .legend .online::before {
   content: "ON LINE";
 }
 .container .contents .infoArea .legend .offline {
   border-radius: 4px;
-  background-color: #F0F2F6;
+  background-color: rgba(0, 167, 60, 0.1);
 }
 .container .contents .infoArea .legend .offline::before {
   content: "OFF LINE";

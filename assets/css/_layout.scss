@@ -16,7 +16,7 @@
   background-color: var(--white);
   border-bottom: 2px solid var(--green30);
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
-  
+
   .logo {
     width: 320px;
     display: flex;
@@ -26,6 +26,7 @@
     font-weight: 700;
     line-height: 22px;
     color: var(--gray10);
+
     &::before {
       content: "";
       display: block;
@@ -36,6 +37,7 @@
       background-size: 100%;
     }
   }
+
   .nav {
     flex: 1;
     display: flex;
@@ -51,35 +53,43 @@
       align-items: center;
       gap: 4px;
       cursor: pointer;
+
       &::before {
         content: "";
         display: block;
         width: 24px;
         height: 24px;
       }
+
       &:hover {
         color: var(--green30);
       }
     }
-    .act, a:hover {
+
+    .act,
+    a:hover {
       font-weight: 700;
       color: var(--gray5);
     }
   }
+
   .userInfo {
     display: flex;
     align-items: center;
     gap: 12px;
+
     span {
       font-size: 13px;
       color: var(--gray10);
     }
+
     .name {
       display: flex;
       align-items: center;
       gap: 12px;
       font-weight: 600;
       color: var(--gray5);
+
       &::after {
         content: "";
         display: block;
@@ -88,13 +98,17 @@
         background-color: var(--gray70);
       }
     }
+
     .ic_logout {
-      &::before{
+      &::before {
         width: 30px;
         height: 30px;
       }
     }
-    .ic:hover {background-color: transparent;}
+
+    .ic:hover {
+      background-color: transparent;
+    }
   }
 }
 
@@ -106,7 +120,7 @@
 
   .LnbArea {
     position: relative;
-    width: 320px;
+    width: 350px;
     display: flex;
     border-right: 1px solid var(--gray60);
     background-color: var(--white);
@@ -121,6 +135,7 @@
       width: 60px;
       height: 100%;
       background-color: var(--green30);
+
       li {
         width: 60px;
         height: 60px;
@@ -131,13 +146,33 @@
         gap: 4px;
         border-bottom: 1px solid var(--green30);
         cursor: pointer;
+
         &:hover,
         &.active {
           background-color: white;
+
           span {
             color: var(--green30);
           }
         }
+
+        span {
+          font-size: 13px;
+          font-weight: 600;
+          color: white;
+        }
+      }
+
+      .ic_logout {
+        position: absolute;
+        bottom: 0;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
         span {
           font-size: 13px;
           font-weight: 600;
@@ -145,67 +180,136 @@
         }
       }
     }
+
     .tabContainer {
       flex: 1;
       display: grid;
       grid-template-rows: 60px 1fr;
+
       .searchBox {
+        position: relative;
         display: flex;
         gap: 4px;
-        padding: 16px;
+        padding: 12px;
+
         .inpBox {
           flex: 1;
         }
+
+        .ic_search {
+          position: absolute;
+          right: 12px;
+          top: 12px;
+          width: 36px;
+          height: 36px;
+
+          &::before {
+            width: 16px;
+            height: 16px;
+          }
+        }
       }
     }
+
     .btnFold {
       top: 50%;
-      right: 0;      
+      right: 0;
       width: 24px;
       height: 46px;
       border-radius: 0 6px 6px 0;
       transform: translate(24px, -50%);
+
       &::before {
         transform: rotate(90deg);
       }
+
       &.fold {
         &::before {
           transform: rotate(270deg);
         }
       }
     }
+
     .treeArea {
+      height: 100%;
       display: flex;
       flex-direction: column;
       gap: 2px;
+      overflow: auto;
+
       .item {
         .row {
           display: flex;
-          gap: 8px;     
+          align-items: center;
+          gap: 8px;
           padding: 8px;
+          font-size: 14px;
           cursor: pointer;
-          .status {
+
+          span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          }
+
+          .all {
+            .count {
+              color: var(--blue30);
+            }
+          }
+
+          .strange {
+            &::before {
+              content: "";
+              display: block;
+              width: 1px;
+              height: 14px;
+              background-color: #ddd;
+            }
+
+            .count {
+              color: var(--red30);
+            }
+          }
+
+          &::before {
+            content: "";
             display: block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;            
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.9939 6L12.3982 6L8.19604 11.6611L3.9939 6Z' fill='%23A0A4B0' stroke='%23A0A4B0'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            transition: all 0.2s;
           }
         }
+
         &.open {
           .row {
             background-color: #EAF3FF !important;
+
+            &::before {
+              transform: rotate(180deg);
+            }
           }
-          .villageList {display: block;}
+
+          .villageList {
+            display: block;
+          }
         }
-      }        
-      .item:nth-child(2n+1) {
-        .row {background-color: #F0F2F6;}
       }
+
+      .item:nth-child(2n+1) {
+        .row {
+          background-color: #F0F2F6;
+        }
+      }
+
       .villageList {
         display: none;
       }
     }
   }
+
   .btnFold {
     position: absolute;
     z-index: 10;
@@ -214,6 +318,7 @@
     align-items: center;
     border: 1px solid var(--gray60);
     background-color: white;
+
     &::before {
       content: "";
       display: block;
@@ -225,6 +330,7 @@
       transition: all 0.2s;
     }
   }
+
   .contents {
     position: relative;
     flex: 1;
@@ -234,13 +340,15 @@
     .mapArea {
       position: relative;
       flex: 1;
+
       .fncButton {
         position: absolute;
         z-index: 1;
-        top: 16px;
-        left: 16px;
+        top: 10px;
+        left: 10px;
         display: flex;
         gap: 4px;
+
         .btn {
           box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
         }
@@ -257,11 +365,12 @@
       border-top: 1px solid var(--gray60);
       background-color: white;
       transition: all 0.3s;
+
       &.fold {
         bottom: -220px;
       }
-      
-      .legend {        
+
+      .legend {
         position: absolute;
         z-index: 1;
         right: 16px;
@@ -272,12 +381,14 @@
         padding: 4px;
         border-radius: 4px;
         background-color: white;
+        border: 1px solid var(--green30);
 
         .label {
           position: relative;
-          padding: 24px 8px 4px 8px;
+          padding: 20px 8px 4px 8px;
           display: flex;
           gap: 8px;
+
           &::before {
             content: "";
             position: absolute;
@@ -288,6 +399,7 @@
             text-align: center;
             color: #6A6A6A;
           }
+
           span {
             display: flex;
             flex-direction: column;
@@ -295,26 +407,22 @@
             font-size: 12px;
             text-align: center;
             color: #6A6A6A;
-            &::before {
-              content: "";
-              display: block;
-              width: 16px;
-              height: 16px;
-              border-radius: 50%;
-              background-color: #55FEE2;
-            }
           }
         }
+
         .online {
           border-radius: 4px;
-          background-color: #F0F2F6;
+          background-color: rgba(0, 167, 60, 0.1);
+
           &::before {
             content: "ON LINE";
           }
         }
+
         .offline {
           border-radius: 4px;
-          background-color: #F0F2F6;
+          background-color: rgba(0, 167, 60, 0.1);
+
           &::before {
             content: "OFF LINE";
           }
@@ -326,13 +434,15 @@
         height: 200px;
         overflow: auto;
       }
+
       .btnFold {
         top: 0;
-        left: 50%;    
+        left: 50%;
         width: 46px;
         height: 24px;
         border-radius: 6px 6px 0 0;
         transform: translate(-50%, -24px);
+
         &.fold {
           &::before {
             transform: rotate(180deg);
