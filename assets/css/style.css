@@ -1475,36 +1475,6 @@ a.ui-button:active,
   font-weight: 700;
   color: var(--gray5);
 }
-.topArea .userInfo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.topArea .userInfo span {
-  font-size: 13px;
-  color: var(--gray10);
-}
-.topArea .userInfo .name {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 600;
-  color: var(--gray5);
-}
-.topArea .userInfo .name::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 12px;
-  background-color: var(--gray70);
-}
-.topArea .userInfo .ic_logout::before {
-  width: 30px;
-  height: 30px;
-}
-.topArea .userInfo .ic:hover {
-  background-color: transparent;
-}
 
 .container {
   width: 100%;
@@ -1655,6 +1625,22 @@ a.ui-button:active,
 }
 .container .LnbArea .treeArea .item.open .villageList {
   display: block;
+}
+.container .LnbArea .treeArea .item.open .villageList li {
+  padding: 0 16px 0 32px;
+  margin-bottom: 8px;
+}
+.container .LnbArea .treeArea .item.open .villageList li .village {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container .LnbArea .treeArea .item.open .villageList li .village span {
+  font-size: 14px;
+}
+.container .LnbArea .treeArea .item.open .villageList li .village .act {
+  font-weight: 600;
+  color: var(--blue30);
 }
 .container .LnbArea .treeArea .item:nth-child(2n+1) .row {
   background-color: #F0F2F6;

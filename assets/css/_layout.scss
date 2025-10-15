@@ -72,44 +72,6 @@
       color: var(--gray5);
     }
   }
-
-  .userInfo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    span {
-      font-size: 13px;
-      color: var(--gray10);
-    }
-
-    .name {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 600;
-      color: var(--gray5);
-
-      &::after {
-        content: "";
-        display: block;
-        width: 1px;
-        height: 12px;
-        background-color: var(--gray70);
-      }
-    }
-
-    .ic_logout {
-      &::before {
-        width: 30px;
-        height: 30px;
-      }
-    }
-
-    .ic:hover {
-      background-color: transparent;
-    }
-  }
 }
 
 .container {
@@ -294,6 +256,23 @@
 
           .villageList {
             display: block;
+            li {
+              padding: 0 16px 0 32px;
+              margin-bottom: 8px;
+              .village {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                span {
+                  font-size: 14px;                  
+                }
+                .act {
+                  font-weight: 600;
+                  color: var(--blue30);
+                }
+              }
+            }
           }
         }
       }
