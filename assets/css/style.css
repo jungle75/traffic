@@ -743,7 +743,7 @@ h5 {
 }
 
 .btn:hover {
-  background-color: var(--gray60) !important;
+  opacity: 0.7;
 }
 
 .btn:disabled {
@@ -756,26 +756,14 @@ h5 {
   color: var(--white);
 }
 
-.btn.primary:hover {
-  background-color: var(--black) !important;
-}
-
 .btn.blue {
   background-color: var(--blue50);
   color: var(--white);
 }
 
-.btn.blue:hover {
-  background-color: var(--blue30) !important;
-}
-
 .btn.red {
   background-color: var(--red80);
   color: var(--red30);
-}
-
-.btn.red:hover {
-  background-color: var(--red70) !important;
 }
 
 .btn.ic::before {
@@ -970,6 +958,21 @@ h5 {
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='7' y='4' width='10' height='16' rx='2' fill='%2300BD52' stroke='%2300BD52'/%3E%3Ccircle cx='12' cy='15' r='2' fill='%23F0F2F6'/%3E%3Ccircle cx='12' cy='9' r='2' fill='%23F0F2F6'/%3E%3Cpath d='M4.91406 13.5H6.5C6.77614 13.5 7 13.7239 7 14V16.793L4.56055 14.3535C4.26544 14.0583 4.44286 13.5664 4.83301 13.5059L4.91406 13.5Z' stroke='%2300BD52'/%3E%3Cpath d='M19.0859 13.5H17.5C17.2239 13.5 17 13.7239 17 14V16.793L19.4395 14.3535C19.7346 14.0583 19.5571 13.5664 19.167 13.5059L19.0859 13.5Z' stroke='%2300BD52'/%3E%3Cpath d='M4.91406 7.5H6.5C6.77614 7.5 7 7.72386 7 8V10.793L4.56055 8.35352C4.26544 8.05829 4.44286 7.56639 4.83301 7.50586L4.91406 7.5Z' stroke='%2300BD52'/%3E%3Cpath d='M19.0859 7.5H17.5C17.2239 7.5 17 7.72386 17 8V10.793L19.4395 8.35352C19.7346 8.05829 19.5571 7.56639 19.167 7.50586L19.0859 7.5Z' stroke='%2300BD52'/%3E%3C/svg%3E%0A");
 }
 
+/*교통신호 아이콘*/
+.signals::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.signals01::before {
+  background-image: url(../img/icon/signals_icon01.svg);
+}
+
 /*table*/
 .inTableArea {
   display: grid;
@@ -1114,7 +1117,7 @@ h5 {
   font-size: 14px;
   color: var(--gray5);
   text-align: center;
-  padding: 0 8px;
+  padding: 8px;
 }
 
 .tableBody tbody td span,
@@ -1125,49 +1128,8 @@ h5 {
   color: var(--gray5);
 }
 
-.dataTable .tableBody {
-  max-height: unset;
-}
-
-.dataTable .tableBody tbody td {
-  padding: 0;
-}
-
-.dataTable .tableBody tbody td span {
-  padding: 5px 8px;
-}
-
-.dataTable .tableBody tbody td span em {
-  display: block;
-  margin-top: 4px;
-}
-
-.dataTable .tableBody tbody td .th,
-.dataTable .tableBody tbody td .td {
-  height: 24px;
-  line-height: 24px;
+.gridArea .tableBody tbody td {
   padding: 0 8px;
-}
-
-.dataTable .tableBody tbody td .td {
-  text-align: right;
-}
-
-.dataTable .tableBody tbody td .th.sum,
-.dataTable .tableBody tbody td .td.sum {
-  background-color: var(--gray80);
-}
-
-.dataTable .tableBody tbody .point {
-  background-color: var(--orange90);
-}
-
-.dataTable .tableBody tfoot .point {
-  background-color: var(--orange80);
-}
-
-.dataTable .tableBody tfoot th span em {
-  display: block;
 }
 
 /* calendar */
@@ -1292,62 +1254,37 @@ a.ui-button:active,
 }
 
 /* 모달팝업 */
-.modal-mask {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-mask .modal-container {
+.modal-container {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+  width: 400px;
   background: var(--white);
-  border-radius: 16px;
-  padding: 40px;
-  overflow: auto;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid var(--gray5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
 }
-
-.modal-mask .modal-container.radiusZero {
-  border-radius: 0;
+.modal-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent var(--gray5) transparent;
 }
-
-.modal-mask .modal-container .modal-header {
-  width: 100%;
-}
-
-.modal-mask .modal-container .modal-header h2 {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 20px;
-  color: var(--gray5);
-  text-align: center;
-}
-
-.modal-mask .modal-container .modal-contents {
+.modal-container .modal-contents {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 16px;
   width: 100%;
-  min-width: 200px;
 }
-
-.modal-mask .modal-container .modal-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+.modal-container.open {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* sign */
@@ -1538,10 +1475,12 @@ a.ui-button:active,
 }
 .container .LnbArea .tabContainer {
   flex: 1;
-  display: grid;
-  grid-template-rows: 60px 1fr;
+  display: flex;
+  flex-direction: column;
 }
 .container .LnbArea .tabContainer .searchBox {
+  width: 100%;
+  height: 60px;
   position: relative;
   display: flex;
   gap: 4px;
@@ -1576,7 +1515,8 @@ a.ui-button:active,
   transform: rotate(270deg);
 }
 .container .LnbArea .treeArea {
-  height: 100%;
+  width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -1768,4 +1708,65 @@ a.ui-button:active,
 }
 .container .contents .infoArea .btnFold.fold::before {
   transform: rotate(180deg);
+}
+
+.modal-contents .section .title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--gray60);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+.modal-contents .section .title span {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray5);
+}
+.modal-contents .infoTable {
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--gray80);
+  border: 1px solid var(--gray60);
+}
+.modal-contents .infoTable .row {
+  display: flex;
+  gap: 16px;
+  padding: 4px 12px;
+}
+.modal-contents .infoTable .row + .row {
+  border-top: 1px solid var(--gray60);
+}
+.modal-contents .infoTable dt {
+  width: 70px;
+  font-weight: 600;
+  color: var(--gray10);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.modal-contents .infoTable dt::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--gray5);
+}
+.modal-contents .infoTable dt span {
+  font-size: 13px;
+  line-height: 15px;
+}
+.modal-contents .infoTable dd {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  text-align: right;
+  padding: 0 8px;
+}
+.modal-contents .infoTable dd span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--black);
 }
