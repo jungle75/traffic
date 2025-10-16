@@ -779,22 +779,6 @@ h5 {
 }
 
 
-/*교통신호 아이콘*/
-.signals::before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 60px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.signals01::before {
-  background-image: url(../img/icon/signals_icon01.svg);
-}
-
-
 /*table*/
 .inTableArea {
   display: grid;
@@ -1083,6 +1067,7 @@ a.ui-button:active,
   border-radius: 8px;
   padding: 16px;
   border: 1px solid var(--gray5);
+  margin-top: 8px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
@@ -1133,55 +1118,44 @@ a.ui-button:active,
   }
 }
 
-.sign {
+.iconSign {
   display: block;
-  width: 16px;
-  height: 16px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
-
-  &.Signal {
-    background-color: var(--red30);
-  }
-
-  &.Blink {
-    background-color: var(--yellow30);
-  }
-
-  &.Out {
-    background-color: var(--gray30);
-  }
-
-  &.Passive {
-    background-color: var(--cyan30);
-  }
-
-  &.Normal_on {
-    border: 2px solid var(--blue30);
-    background-color: rgba($color: #1A70F8, $alpha: 0.2);
-  }
-
-  &.Time_on {
-    border: 2px solid var(--pink30);
-    background-color: rgba($color: #F81AE9, $alpha: 0.2);
-  }
-
-  &.Sensitive_on {
-    border: 2px solid var(--red30);
-    background-color: rgba($color: #F81A1E, $alpha: 0.2);
-  }
-
-  &.Normal_off {
-    border: 2px solid var(--blue30);
-    background-color: var(--gray50);
-  }
-
-  &.Time_off {
-    border: 2px solid var(--pink30);
-    background-color: var(--gray50);
-  }
-
-  &.Sensitive_off {
-    border: 2px solid var(--red30);
-    background-color: var(--gray50);
-  }
+}
+.Signal {
+  background-color: var(--red30);
+}
+.Blink {
+  background-color: var(--yellow30);
+}
+.Out {
+  background-color: var(--gray30);
+}
+.Passive {
+  background-color: var(--cyan30);
+}
+.Normal_on {
+  border: 2px solid var(--blue30);
+  background-color: rgba($color: #1A70F8, $alpha: 0.2);
+}
+.Time_on {
+  border: 2px solid var(--pink30);
+  background-color: rgba($color: #F81AE9, $alpha: 0.2);
+}
+.Sensitive_on {
+  border: 2px solid var(--red30);
+  background-color: rgba($color: #F81A1E, $alpha: 0.2);
+}
+.Normal_off {
+  border: 2px solid var(--blue30);
+  background-color: var(--gray50);
+}
+.Time_off {
+  border: 2px solid var(--pink30);
+  background-color: var(--gray50);
+}
+.Sensitive_off {
+  border: 2px solid var(--red30);
+  background-color: var(--gray50);
 }

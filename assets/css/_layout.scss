@@ -390,6 +390,11 @@
             text-align: center;
             color: #6A6A6A;
           }
+
+          .iconSign {
+            width: 16px;
+            height: 16px;
+          }
         }
 
         .online {
@@ -408,6 +413,11 @@
           &::before {
             content: "OFF LINE";
           }
+        }
+
+        .sign {
+          width: 16px;
+          height: 16px;
         }
       }
 
@@ -444,6 +454,12 @@
       border-bottom: 1px solid var(--gray60);
       padding-bottom: 8px;
       margin-bottom: 16px;
+
+      .iconSign {
+        position: relative;
+        width: 16px;
+        height: 16px;
+      }
 
       span {
         font-size: 16px;
@@ -497,5 +513,19 @@
         color: var(--black)
       }
     }
+  }
+}
+
+.signalIcon {
+  width: 48px;
+  height: 48px;
+  padding: 4px;
+  cursor: pointer;
+  .iconSign {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 48px;
   }
 }
